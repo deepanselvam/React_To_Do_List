@@ -1,0 +1,21 @@
+import React from 'react'
+import ListItem from './ListItem'
+
+const Content = ({ items, handleCheck, handleDelete }) => {
+  return (
+    <>
+    {items.length ? (
+        <ListItem
+        key={items.id}
+            items={items}
+            handleCheck={handleCheck}
+            handleDelete={handleDelete}
+        />
+    ) : (
+        <p style={{ marginTop: '2rem' }}>Your list is empty.</p>
+    )}
+</>
+  )
+}
+
+export default Content
